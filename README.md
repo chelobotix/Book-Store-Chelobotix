@@ -1,8 +1,84 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+  <img src="https://user-images.githubusercontent.com/65084923/220454148-be6c369f-a646-4471-83fe-181539e27320.png" alt="logo" width="300"  height="auto" />
+  <br/>
+  <img src="https://user-images.githubusercontent.com/65084923/220199943-ce6cd5da-d55e-4149-a0ac-8c588216d81f.png" alt="logo" width="300"  height="auto" />
+  <br/>
+  <img src="https://user-images.githubusercontent.com/65084923/220200035-01fa5e08-af6a-495b-b597-55157a2b7d95.gif" alt="logo" />
+  <br/>
+
+  <h3><b>Bookstore</b></h3>
+  <h3><b>Bookstore - React Microverse Project Module 3</b></h3>
+
+</div>
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+
+- [🧑🏻‍💻 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Available Scripts](#available-scripts)
+  - [Clone](#clone)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
+
+# 📖 Bookstore - React Microverse Project Module 3<a name="about-project"></a>
+
+> Math Magicians React App developed with Nodejs, Html, Css, Js, Webpack, React
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/HTML">Html</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/CSS">Css</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/JavaScript">Vanilla Javascript</a></li>
+    <li><a href="https://webpack.js.org/">Webpack</a></li>
+    <li><a href="https://react.org/">React</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- **Skeleton Website made with React**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🧑🏻‍💻 Live Demo <a name="live-demo"></a>
+
+coming soon...
+<br/>
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and use as a template for your own portafolio site, follow these steps.
+
+### Clone <a name="clone"></a>
+
+Clone this repository to your desired folder:
+
+```sh
+  https://github.com/chelobotix/Book-Store-Chelobotix.git
+```
+
+## 🤖 Available Scripts <a name="available-scripts"></a>
 
 In the project directory, you can run:
 
@@ -33,38 +109,60 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<!-- AUTHOR -->
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 👥 Author <a name="authors"></a>
 
-## Learn More
+👤 **Author1**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+: Marcelo Alarcon Barrenechea
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🇧🇴 Bolivia 💓
 
-### Code Splitting
+- GitHub: [@chelobotix](https://github.com/chelobotix)
+- Linkedin: [Marcelo Alarcon](https://www.linkedin.com/in/marceloalarconb/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Analyzing the Bundle Size
+## 🔭 Future Features <a name="future-features"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [ ] **Logic, API, Style**
 
-### Making a Progressive Web App
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🤝 Contributing <a name="contributing"></a>
 
-### Advanced Configuration
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Deployment
+## ⭐️ Show your support <a name="support"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you like this project please let me know
 
-### `npm run build` fails to minify
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+My mother. Let's play to the end together ❤️ with 🧠
+<br/>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ❓ FAQ <a name="faq"></a>
+
+- **Is there any restriction to adapting the page to other porpuse??**
+
+  - No problem.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](<a href="./licence">License</a>) licensed.
+
+<a href="./licence">License</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
