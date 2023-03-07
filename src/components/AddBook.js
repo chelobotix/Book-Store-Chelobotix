@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
 
 const AddBook = () => {
-  const bookArray = useSelector((state) => state.book.booksArray);
+  const bookArray = useSelector((state) => state.book.bookArray);
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const AddBook = () => {
   const handleAddBook = (e) => {
     e.preventDefault();
     const obj = {
-      id: (bookArray.length + 1).toString(),
+      item_id: (`item${bookArray.length + 1}`),
       title,
       author,
     };
