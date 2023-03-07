@@ -36,7 +36,7 @@
 
 # 📖 Bookstore - React Microverse Project Module 3<a name="about-project"></a>
 
-> Math Magicians React App developed with Nodejs, Html, Css, Js, Webpack, React
+> Bookstore React & Redux App developed with Nodejs, Html, Css, Js, Webpack, React
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -50,6 +50,7 @@
     <li><a href="https://en.wikipedia.org/wiki/JavaScript">Vanilla Javascript</a></li>
     <li><a href="https://webpack.js.org/">Webpack</a></li>
     <li><a href="https://react.org/">React</a></li>
+    <li><a href="https://redux.js.org/">Redux</a></li>
   </ul>
 </details>
 
@@ -58,6 +59,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **Skeleton Website made with React**
+- **Slice with Redux Toolkit**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
