@@ -8,13 +8,13 @@ const initialState = {
 };
 
 export const fetchGetBooks = createAsyncThunk('get/Books', async () => {
-  const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZXpbk6Zf7AiuuesiRlmq/books';
+  const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/gaCDn1oGS1nyqaeyogKu/books';
   const response = await fetch(url);
   return response.json();
 });
 
 export const fetchPostBook = createAsyncThunk('post/Books', async (obj) => {
-  const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZXpbk6Zf7AiuuesiRlmq/books';
+  const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/gaCDn1oGS1nyqaeyogKu/books';
   const response = await fetch(url, {
     method: 'POST',
     headers: {
@@ -25,6 +25,14 @@ export const fetchPostBook = createAsyncThunk('post/Books', async (obj) => {
       JSON.stringify(
         obj,
       ),
+  });
+  return JSON.stringify(response);
+});
+
+export const fetchDeleteBooks = createAsyncThunk('get/Delete_Books', async (id) => {
+  const url = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/gaCDn1oGS1nyqaeyogKu/books/${id}`;
+  const response = await fetch(url, {
+    method: 'DELETE',
   });
   return JSON.stringify(response);
 });
@@ -72,6 +80,28 @@ export const bookSlice = createSlice({
     ));
 
     builder.addCase(fetchPostBook.rejected, (state, action) => (
+      {
+        ...state,
+        error: action.error.message,
+        isLoading: false,
+      }
+    ));
+
+    builder.addCase(fetchDeleteBooks.pending, (state) => (
+      {
+        ...state,
+        isLoading: true,
+      }
+    ));
+
+    builder.addCase(fetchDeleteBooks.fulfilled, (state) => (
+      {
+        ...state,
+        isLoading: false,
+      }
+    ));
+
+    builder.addCase(fetchDeleteBooks.rejected, (state, action) => (
       {
         ...state,
         error: action.error.message,
