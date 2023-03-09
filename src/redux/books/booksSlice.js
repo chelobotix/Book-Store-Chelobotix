@@ -1,47 +1,85 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
-  bookArray: [
-    {
-      item_id: 'item1',
-      title: 'The Great Gatsby',
-      author: 'John Smith',
-      category: 'Fiction',
-    },
-    {
-      item_id: 'item2',
-      title: 'Anna Karenina',
-      author: 'Leo Tolstoy',
-      category: 'Fiction',
-    },
-    {
-      item_id: 'item3',
-      title: 'The Selfish Gene',
-      author: 'Richard Dawkins',
-      category: 'Nonfiction',
-    },
-  ],
+  bookArray: null,
+  isLoading: false,
+  error: null,
+  message: '',
 };
+
+export const fetchGetBooks = createAsyncThunk('get/Books', async () => {
+  const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZXpbk6Zf7AiuuesiRlmq/books';
+  const response = await fetch(url);
+  return response.json();
+});
+
+export const fetchPostBook = createAsyncThunk('post/Books', async (obj) => {
+  const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZXpbk6Zf7AiuuesiRlmq/books';
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body:
+      JSON.stringify(
+        obj,
+      ),
+  });
+  return JSON.stringify(response);
+});
 
 export const bookSlice = createSlice({
   name: 'Book',
   initialState,
-  reducers: {
-    addBook: (state, action) => (
-      { ...state, bookArray: [...state.bookArray, action.payload] }
-    ),
-    removeBook: (state, action) => {
-      const aux = state.bookArray.filter((elem) => elem.item_id !== action.payload);
-      return {
+  extraReducers: (builder) => {
+    builder.addCase(fetchGetBooks.pending, (state) => (
+      {
         ...state,
-        bookArray: aux,
-      };
-    },
+        isLoading: true,
+      }
+    ));
+
+    builder.addCase(fetchGetBooks.fulfilled, (state, action) => (
+      {
+        ...state,
+        isLoading: false,
+        bookArray: action.payload,
+      }
+    ));
+
+    builder.addCase(fetchGetBooks.rejected, (state, action) => (
+      {
+        ...state,
+        error: action.error.message,
+        isLoading: false,
+      }
+    ));
+
+    builder.addCase(fetchPostBook.pending, (state) => (
+      {
+        ...state,
+        isLoading: true,
+      }
+    ));
+
+    builder.addCase(fetchPostBook.fulfilled, (state) => (
+      {
+        ...state,
+        isLoading: false,
+        message: 'created',
+      }
+    ));
+
+    builder.addCase(fetchPostBook.rejected, (state, action) => (
+      {
+        ...state,
+        error: action.error.message,
+        isLoading: false,
+      }
+    ));
   },
 });
 
-export const {
-  addBook, removeBook,
-} = bookSlice.actions;
-
 export default bookSlice.reducer;
+export const { update } = bookSlice.actions;

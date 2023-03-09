@@ -1,10 +1,22 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchGetBooks } from './redux/books/booksSlice';
+
 import Books from './components/Books';
 import Header from './components/Header';
 import Categories from './components/Categories';
 
 function App() {
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state.book);
+
+  useEffect(() => {
+    if (!state.bookArray) {
+      dispatch(fetchGetBooks());
+    }
+  }, [state.bookArray, dispatch]);
   return (
     <BrowserRouter>
       <Header />
