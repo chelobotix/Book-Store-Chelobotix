@@ -1,19 +1,29 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { fetchDeleteBooks, fetchGetBooks } from '../redux/books/booksSlice';
 
 const Book = (props) => {
   const { id, author, title } = props;
   const dispatch = useDispatch();
 
-  const handleRemove = (id) => {
-    dispatch(removeBook(id));
+  const handleDeleteBook = (id) => {
+    // eslint-disable-next-line no-unused-vars
+    dispatch(fetchDeleteBooks(id)).then((response) => dispatch(fetchGetBooks()));
   };
+
   return (
     <div>
-      <p>{author}</p>
-      <p>{title}</p>
-      <button onClick={() => handleRemove(id)} type="button">Remove</button>
+      <p>
+        Author:
+        {' '}
+        {author}
+      </p>
+      <p>
+        Title:
+        {' '}
+        {title}
+      </p>
+      <button onClick={() => handleDeleteBook(id)} type="button">Remove</button>
     </div>
   );
 };

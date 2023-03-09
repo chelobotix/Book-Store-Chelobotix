@@ -1,17 +1,25 @@
 import { useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import AddBook from './AddBook';
 import Book from './Book';
 
 const BookList = () => {
-  const bookArray = useSelector((state) => state.book.bookArray);
+  const state = useSelector((state) => state.book);
+
+  if (!state.bookArray) {
+    return <h1>Loading...</h1>;
+  }
 
   return (
     <section className="bookList">
       <ul>
-        {bookArray.map((elem) => (
-          <li key={elem.title}>
-            <Book id={elem.item_id} title={elem.title} author={elem.author} />
-          </li>
+        {Object.entries(state.bookArray).map(([key]) => (
+          <Book
+            key={uuidv4()}
+            id={key}
+            title={state.bookArray[key][0].title}
+            author={state.bookArray[key][0].author}
+          />
         ))}
       </ul>
       <AddBook />

@@ -60,6 +60,7 @@
 
 - **Skeleton Website made with React**
 - **Slice with Redux Toolkit**
+- **API connection using Redux Toolkit AsyncThunk**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,7 +131,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Logic, API, Style**
+- [ ] **Style**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
