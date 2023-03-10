@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchGetBooks } from './redux/books/booksSlice';
-
+import './app.css';
 import Books from './components/Books';
 import Header from './components/Header';
 import Categories from './components/Categories';
