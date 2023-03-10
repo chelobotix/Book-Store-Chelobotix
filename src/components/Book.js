@@ -11,8 +11,7 @@ const Book = (props) => {
   const dispatch = useDispatch();
 
   const handleDeleteBook = (id) => {
-    // eslint-disable-next-line no-unused-vars
-    dispatch(fetchDeleteBooks(id)).then((response) => dispatch(fetchGetBooks()));
+    dispatch(fetchDeleteBooks(id)).then(() => dispatch(fetchGetBooks()));
   };
 
   return (
@@ -28,8 +27,8 @@ const Book = (props) => {
           {author}
         </p>
         <button className={style.button} type="button">Comments</button>
-        <button className={`${style.button} ${style.buttonmiddle}`} type="button">Remove</button>
-        <button onClick={() => handleDeleteBook(id)} className={style.button} type="button">Edit</button>
+        <button onClick={() => handleDeleteBook(id)} className={`${style.button} ${style.buttonmiddle}`} type="button">Remove</button>
+        <button className={style.button} type="button">Edit</button>
       </div>
       <div className={style.PercentageContainer}>
         <img className={style.imgPercentage} src={loading} alt="" />
